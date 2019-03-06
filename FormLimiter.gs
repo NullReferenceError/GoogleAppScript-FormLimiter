@@ -49,7 +49,7 @@ function createFormTrigger() {
     Logger.log('No triggers found on the form: ' + currentForm.getTitle() + '.  So we are creating a trigger for it...')
     
       ScriptApp.newTrigger('responseLimit')
-      .forForm(FormApp.getActiveForm())
+      .forForm(currentForm)
       .onFormSubmit()
       .create(); 
   }
